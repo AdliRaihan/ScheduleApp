@@ -1,7 +1,23 @@
 # ScheduleApp
 Season lanjutan dari GMAKER & Pengambilan data melalui JSON
-
-
+<hr/>
+Kotributor : 
+<li> adli raihan </li>
+<br>
+Bahasa Program di projek ini :
+<li> Kotlin <i>sudah upload</i><li>
+<li> <B>PHP = DATABASE?</B> <i>belum upload</i></li> 
+<li> HTML & CSS & JS <i>belum upload</i></li>
+<br>
+Framework :
+<li> Bootstrap <i>HTML</i> </li>
+<li> Flutter.io <i>Android <b>lagi belajar</b></i></li>
+<li> jQuery <i>JS</i> </li>
+<br>
+Database :
+<li> MYSQL! </li>
+<br>
+<hr/>
 Target Applikasi Bulan ini <i>Implementasi layout ini dengan hard coding</i><br><br>
 <img src="appimage/landing_recycler_code.jpg" width="256px"/>
 <img src="appimage/landing_recycler_single_date.jpg" width="256px"/><br>
@@ -21,7 +37,9 @@ saya sendiri dengan tanpa menirukan mockup secara 100% dan/atau aplikasi sama se
 
 
 <hr/>
+<i> any question ? </i><br>
 Contact : adliraihan002@gmail.com<br>
 ID Line : adliraihan<br>
 Instagram : adli.raihan<br>
-Twitter : adli_raihan<br>
+Twitter : adli_raihan<br><br>
+<i>Segala pertanyaan akan saya jawab , kecuali pertanyaan yang tidak ada hubungannya dengan jobdesk saya sebagai backend android / frontend android </i>
