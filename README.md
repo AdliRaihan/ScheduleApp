@@ -2,25 +2,26 @@
 Season lanjutan dari GMAKER & Pengambilan data melalui JSON
 <hr/>
 Kotributor : 
-<li> adli raihan </li>
+Adli Raihan<br>
 <br>
 Bahasa Program di projek ini :
-<li> Kotlin <i>sudah upload</i><li>
-<li> <B>PHP = DATABASE?</B> <i>belum upload</i></li> 
-<li> HTML & CSS & JS <i>belum upload</i></li>
+1 Kotlin <i>sudah upload</i><br>
+2 <B>PHP</B> <i>belum upload</i> <br>
+3 HTML & CSS & JS <i>belum upload</i><br>
 <br>
 Framework :
-<li> Bootstrap <i>HTML</i> </li>
-<li> Flutter.io <i>Android <b>lagi belajar</b></i></li>
-<li> jQuery <i>JS</i> </li>
+1 Bootstrap <i>HTML</i> <br>
+2 Flutter.io <i>Android <b>lagi belajar</b></i><br>
+3 jQuery <i>JS</i> <br>
 <br>
 Database :
-<li> MYSQL! </li>
+1 MYSQL! 
 <br>
 <hr/>
 Target Applikasi Bulan ini <i>Implementasi layout ini dengan hard coding</i><br><br>
 <img src="appimage/landing_recycler_code.jpg" width="256px"/>
-<img src="appimage/landing_recycler_single_date.jpg" width="256px"/><br>
+<img src="appimage/landing_recycler_single_date.jpg" width="256px"/>
+
 <h5>Source Code Img</h5>
 <img src="appimage/source_code.jpg" width="512"><br>
 
@@ -42,4 +43,4 @@ Contact : adliraihan002@gmail.com<br>
 ID Line : adliraihan<br>
 Instagram : adli.raihan<br>
 Twitter : adli_raihan<br><br>
-<i>Segala pertanyaan akan saya jawab , kecuali pertanyaan yang tidak ada hubungannya dengan jobdesk saya sebagai backend android / frontend android </i>
+<i>Segala pertanyaan akan saya jawab , kecuali pertanyaan yang tidak ada hubungannya dengan jobdesk saya sebagai backend android / frontend android / <b>newbie</b> backend web</i>
