@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">schedule_app</string>
+    <string name="app_name">Schedule Application</string>
     <string name="title_detailactivity_detail">DetailActivity Detail</string>
     <string name="app_name_splash">SCHEDULE</string>
     <string name="app_description">Application</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

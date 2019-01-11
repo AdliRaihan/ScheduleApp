@@ -68,7 +68,6 @@ class common_database : AppCompatActivity(){
                 }
                 //
             })
-        //OkHttpClient.Builder().connectionSpecs(Collections.singletonList(ruleConnection)).build().newCall(Request.Builder().url(defaultUri).build()).enqueue(object : Callback{})
     }
     class getCertificate{
         fun onGet() : OkHttpClient.Builder?{
@@ -81,7 +80,7 @@ class common_database : AppCompatActivity(){
                         }
                         //
                     }
-                    //dwdwdwdwdw
+                    //
                 }
                 //
             }
