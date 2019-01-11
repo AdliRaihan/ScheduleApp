@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <!-- Costum Color -->
+    <color name="MazarineBlue">#273c75</color>
+    <color name="PicoVoid">#192a56</color>
+    <color name="LynxWhite">#f5f6fa</color>
+    <color name="BlueNight">#353b48</color>
+    <color name="ElectroMagnetic">#2f3640</color>
+
+</resources>
