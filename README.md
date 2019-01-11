@@ -10,7 +10,7 @@ Bahasa Program di projek ini :<br>
 3 HTML & CSS & JS <i>belum upload</i><br>
 <br>
 Framework :<br>
-1 Bootstrap <i>HTML</i> <br>
+1 Bootstrap <i>CSS</i> <br>
 2 Flutter.io <i>Android <b>lagi belajar</b></i><br>
 3 jQuery <i>JS</i> <br>
 <br>
