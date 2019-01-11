@@ -2,19 +2,19 @@
 Season lanjutan dari GMAKER & Pengambilan data melalui JSON
 <hr/>
 Kotributor : 
-Adli Raihan<br>
+<b>Adli Raihan</b><br>
 <br>
-Bahasa Program di projek ini :
+Bahasa Program di projek ini :<br>
 1 Kotlin <i>sudah upload</i><br>
 2 <B>PHP</B> <i>belum upload</i> <br>
 3 HTML & CSS & JS <i>belum upload</i><br>
 <br>
-Framework :
+Framework :<br>
 1 Bootstrap <i>HTML</i> <br>
 2 Flutter.io <i>Android <b>lagi belajar</b></i><br>
 3 jQuery <i>JS</i> <br>
 <br>
-Database :
+Database :<br>
 1 MYSQL! 
 <br>
 <hr/>
