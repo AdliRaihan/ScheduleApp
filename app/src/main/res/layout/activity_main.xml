@@ -33,30 +33,68 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
+                                    android:id="@+id/navigation_header_text"
                                 android:textSize="16dp"
                                 android:textColor="@color/LynxWhite"
                                 android:fontFamily="@font/roboto_thin"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textAlignment="center"
-                                android:text="JANUARY"/>
+                                android:text="25 JANUARY"/>
+
                             <ImageView
                                 android:layout_alignParentEnd="true"
                                 android:src="@drawable/ic_notifications_none_24dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
+
+                            <ImageView
+                                    android:layout_width="8dp"
+                                    android:layout_height="8dp"
+                                    android:src="@drawable/notification_active"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginEnd="2dp"/>
                         </RelativeLayout>
                     </LinearLayout>
                 </android.support.v7.widget.Toolbar>
-
         </android.support.design.widget.AppBarLayout>
     </LinearLayout>
 
 
+
+    <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/content_settings"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:id="@+id/hide_content_settings"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@color/ElectroMagnetic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <ImageView
+                    android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+            <TextView
+                    android:textSize="72dp"
+                    android:gravity="center"
+                    android:text="HALLO BANDUNG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+    </LinearLayout>
+
     <ScrollView
-        android:background="@color/HintOfPesinive"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+            android:id="@+id/content_landing"
+            android:background="@color/HintOfPesinive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,21 +110,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                 <LinearLayout
-                    android:padding="5dp"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                        <android.support.v7.widget.RecyclerView
-                            android:id="@+id/date1"
-                            android:layout_margin="5dp"
-                            android:elevation="0.25dp"
-                            android:padding="20dp"
-                            android:background="@drawable/activity_holder_white"
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                        android:id="@+id/testJaks"
+                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                        </android.support.v7.widget.RecyclerView>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -99,98 +128,6 @@
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        <LinearLayout
-                            android:layout_margin="5dp"
-                            android:elevation="0.25dp"
-                            android:padding="20dp"
-                            android:background="@drawable/activity_holder_white"
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-                            <!-- RECYCLERDALEM NEXT-->
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-                                <LinearLayout
-                                    android:gravity="center"
-                                    android:orientation="vertical"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
-                                    <LinearLayout
-                                        android:orientation="horizontal"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content">
-                                        <TextView
-                                            android:textColor="@color/BlueNight"
-                                            android:textSize="18dp"
-                                            android:text="28"
-                                            android:fontFamily="@font/roboto_bold"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content" />
-                                        <TextView
-                                            android:textColor="@color/BlueNight"
-                                            android:textSize="18dp"
-                                            android:text=" Wed"
-                                            android:fontFamily="@font/roboto_bold"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content" />
-                                    </LinearLayout>
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:layout_marginLeft="10dp"
-                                    android:orientation="vertical"
-                                    android:layout_width="175dp"
-                                    android:layout_height="wrap_content">
-                                    <LinearLayout
-                                        android:paddingVertical="2.5dp"
-                                        android:gravity="center"
-                                        android:orientation="horizontal"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content">
-                                        <TextView
-                                            android:textColor="@color/ElectroMagnetic"
-                                            android:text="Total :  "
-                                            android:fontFamily="@font/roboto_thin"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content" />
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:fontFamily="@font/roboto"
-                                            android:text="6 Hours" />
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:layout_marginTop="10dp"
-                                        android:orientation="vertical"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content">
-                                        <TextView
-                                            android:fontFamily="@font/roboto"
-                                            android:text="Test Logic Data - "
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content" />
-                                        <TextView
-                                            android:fontFamily="@font/roboto_thin"
-                                            android:text="dor dord rod rodr dor dord ord rodr odrd orodorowkdokwodkaksmfkamlsflmgas h "
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content" />
-                                    </LinearLayout>
-                                </LinearLayout>
-                                <LinearLayout
-                                    android:layout_gravity="right"
-                                    android:gravity="center|right"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:src="@drawable/ic_check_green_24dp" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-                        </LinearLayout>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -206,12 +143,13 @@
                         <LinearLayout
                             android:layout_margin="5dp"
                             android:elevation="0.25dp"
-                            android:padding="20dp"
+                            android:padding="10dp"
                             android:background="@drawable/activity_holder_white"
                             android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <LinearLayout
+                                    android:gravity="center"
                                 android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
@@ -224,20 +162,7 @@
                                         android:orientation="horizontal"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content">
-                                        <TextView
-                                            android:textColor="@color/BlueNight"
-                                            android:textSize="18dp"
-                                            android:text="28"
-                                            android:fontFamily="@font/roboto_bold"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content" />
-                                        <TextView
-                                            android:textColor="@color/BlueNight"
-                                            android:textSize="18dp"
-                                            android:text=" Wed"
-                                            android:fontFamily="@font/roboto_bold"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content" />
+
                                     </LinearLayout>
                                 </LinearLayout>
                                <TextView
@@ -252,7 +177,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center|right"
-                                    android:src="@drawable/ic_check_green_24dp" />
+                                    android:src="@drawable/ic_add_circle_outline_black_24dp" />
                             </LinearLayout>
                         </LinearLayout>
 

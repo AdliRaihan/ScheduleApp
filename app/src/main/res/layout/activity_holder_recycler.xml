@@ -4,78 +4,46 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            android:id="@+id/parent_recycler"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <LinearLayout
             android:gravity="center"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <LinearLayout
+                    android:layout_gravity="center"
+                    android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
+
                 <TextView
-                    android:id="@+id/tanggalrecycler"
-                    android:textColor="@color/BlueNight"
-                    android:textSize="18dp"
-                    android:text="27"
-                    android:fontFamily="@font/roboto_bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/harirecycler"
-                    android:textColor="@color/BlueNight"
-                    android:textSize="18dp"
-                    android:text=" Tue"
-                    android:fontFamily="@font/roboto_bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                        android:id="@+id/jamRecyler"
+                        android:textColor="@color/BlueNight"
+                        android:textSize="18dp"
+                        android:text="11.00 PM"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:orientation="vertical"
-            android:layout_width="175dp"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:paddingVertical="2.5dp"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textColor="@color/ElectroMagnetic"
-                    android:text="Total :  "
-                    android:fontFamily="@font/roboto_thin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/totaljamrecycler"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto"
-                    android:text="12 Hours" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="5dp"
+                android:paddingHorizontal="5dp"
+                android:gravity="center"
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/judulrecycler"
+                android:layout_width="175dp"
+                android:layout_height="match_parent">
+            <TextView
+                    android:id="@+id/judulSingkat"
+                    android:textColor="@color/BlueNight"
+                    android:textSize="12dp"
+                    android:text="8 Schedule at this Hour"
                     android:fontFamily="@font/roboto"
-                    android:text="Test Design - "
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/descrecycler"
-                    android:fontFamily="@font/roboto_thin"
-                    android:text="Activity Test cc: Adli Raihan : design deisng diesn... "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+                    android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
             android:layout_gravity="right"
@@ -85,15 +53,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_check_green_24dp" />
+                android:src="@drawable/ic_chevron_right_black_24dp" />
         </LinearLayout>
     </LinearLayout>
-    <ImageView
-        android:id="@+id/separatorrecycler"
-        android:visibility="gone"
-        android:layout_marginVertical="15dp"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/HintOfPesinive"/>
 </LinearLayout>

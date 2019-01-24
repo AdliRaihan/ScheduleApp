@@ -2,10 +2,21 @@ package later.corporation.adliraihan.schedule_app.ActivitySchedule_app
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import android.widget.LinearLayout
+import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_holder_recycler.view.*
+import kotlinx.android.synthetic.main.activity_main.*
+import later.corporation.adliraihan.schedule_app.DatabaseSchedule_app.common_database
 import later.corporation.adliraihan.schedule_app.R
 import later.corporation.adliraihan.schedule_app.otherFunctionSchedule_app.adapterFunction
+import later.corporation.adliraihan.schedule_app.otherFunctionSchedule_app.calendarFunction
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,36 +25,87 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewManager: RecyclerView.LayoutManager
 
     companion object {
-        var date2 = arrayListOf<Int>( 1 , 2 , 3 , 4, 5)
-        var totaljam = arrayListOf<Int>(24,12,8,2,3)
-        var judul = arrayListOf<String?>(
-                "Membeli ayam",
-                "Membuat aplikasi",
-                "Mendevelop GMaker",
-                "Menjual data GMaker",
-                "Menjual Hp baru saya"
-        )
-        var desc = arrayListOf<String?>(
-                "Menjual ayam ku tapi ga laku laku",
-                "Menjual ayam ku tapi ga laku laku",
-                "Menjual ayam ku tapi ga laku laku",
-                "Menjual ayam ku tapi ga laku laku",
-                "Menjual ayam ku tapi ga laku laku"
-        )
+        var jamLandingString = arrayListOf<String>()
+        var judulLandingString = arrayListOf<String>()
 
+
+        var jamString:String = String()
+        var judulSingkatString:String = String()
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        initMain()
+    }
 
-
-        viewManager = LinearLayoutManager(this)
-        viewAdapter = adapterFunction(totaljam, judul, desc,this)
-        recyclerView = findViewById<RecyclerView>(R.id.date1).apply {
-            setHasFixedSize(false)
-            layoutManager = viewManager
-            adapter = viewAdapter
+    fun initMain(){
+        hide_content_settings.apply {
+            setOnClickListener {
+                content_landing.startAnimation(AnimationUtils.loadAnimation(this@MainActivity,R.anim.abc_fade_in)).apply {
+                    content_landing.visibility = android.view.View.VISIBLE
+                    content_settings.startAnimation(AnimationUtils.loadAnimation(this@MainActivity,R.anim.abc_fade_out)).apply {
+                        content_settings.visibility = android.view.View.GONE
+                    }
+                }
+                navigation_header_text.isEnabled = true
+            }
+            setOnLongClickListener {
+                return@setOnLongClickListener true
+            }
         }
+        navigation_header_text.apply {
+            setText("${Calendar.getInstance().time.date} ${calendarFunction().getMMMM(Calendar.getInstance().time.month)}")
+            setOnClickListener {
+                content_landing.startAnimation(AnimationUtils.loadAnimation(this@MainActivity,R.anim.abc_fade_out)).apply {
+                    content_landing.visibility = android.view.View.GONE
+                    content_settings.startAnimation(AnimationUtils.loadAnimation(this@MainActivity,R.anim.abc_fade_in)).apply {
+                        content_settings.visibility = android.view.View.VISIBLE
+                    }
+                }
+                    navigation_header_text.isEnabled = false
+            }
+            setOnLongClickListener {
 
+                return@setOnLongClickListener true
+            }
+        }
+        common_database().onReadIDTarget(this)
+        println(jamString)
+        initLandingQuote(jamString, judulSingkatString)
+    }
+
+    fun initLandingQuote(jamstr:String,judulsingkatstr:String){
+        val paramMatch = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.MATCH_PARENT
+        )
+        paramMatch.setMargins(10,10,10,10)
+       //===============//
+        viewManager = LinearLayoutManager(this)
+        //===============//
+        testJaks.addView(
+            LinearLayout(this).apply {
+                setPadding(30,30,30,30)
+                background = getDrawable(R.drawable.activity_holder_white)
+                layoutParams = paramMatch
+                addView(
+                    LayoutInflater.from(this@MainActivity).inflate(R.layout.activity_holder_recycler,this,false).also {
+                        it.jamRecyler.setText(jamstr)
+                        it.judulSingkat.setText(judulsingkatstr)
+                    }
+                )
+            }
+        )
+        //======================//
     }
 }
+
+//RecyclerView(this@MainActivity).apply {
+//    setPadding(50,50,50,50)
+//    background = getDrawable(R.drawable.activity_holder_white)
+//    setHasFixedSize(true)
+//    layoutManager = viewManager
+//    adapter = viewAdapter
+//    layoutParams = paramMatch
+//}

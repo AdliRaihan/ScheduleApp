@@ -11,46 +11,50 @@ import android.widget.TextView
 import later.corporation.adliraihan.schedule_app.R
 
 class adapterFunction(
+        private val jamTarget:ArrayList<String>,
         private val totaljam:ArrayList<Int>,
-        private val judul:ArrayList<String?>,
-        private val desc:ArrayList<String?>,
+        private val judul:ArrayList<String>,
+        private val desc:ArrayList<String>,
         private val context: Context
 ):RecyclerView.Adapter<adapterFunction.adapterHolder>(){
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): adapterHolder {
-        return adapterHolder(LayoutInflater.from(p0.context).inflate(R.layout.activity_holder_recycler,p0,false))
+        return adapterHolder(LayoutInflater.from(p0.context).inflate(R.layout.activity_child_recycler,p0,false))
     }
 
     override fun getItemCount(): Int {
-        return totaljam.size
+        return jamTarget.size
     }
 
     override fun onBindViewHolder(p0: adapterHolder, p1: Int) {
-        if(p1 > 0){
-            p0.dateRecyc.setTextColor(ContextCompat.getColor(context,android.R.color.transparent))
-            p0.dayRecyc.setTextColor(ContextCompat.getColor(context,android.R.color.transparent))
-        }
+//        //Tree DEBUGGING
+//        println( judul.get(jamTarget.get(p1)))
+//        println(desc.get(jamTarget.get(p1)))
+        p0.apply {
+            if(p1 > 0
+            ){
 
-        if(p1 != totaljam.size-1 && totaljam.size > 1){
-            p0.imgsparator.visibility = android.view.View.VISIBLE
-        }
+            }
+            if(p1 != totaljam.size-1 && totaljam.size > 1)
+//                imgsparator.visibility = android.view.View.VISIBLE
+            //=================//
+            // Placement Variabel           //
+            // ================ //
+            judulRecyc.setText(judul[p1])
+            descRecyc.setText(desc[p1])
 
-
-        p0.descRecyc.setText(desc[p1])
-        p0.maxhours.apply {
-            if(totaljam[p1] == 0) setText(" ${totaljam[p1]} Hour")
-            else if(totaljam[p1] > 0) setText(" ${totaljam[p1]} Hours")
-            else setText(" Error ")
+            maxhours.apply {
+                if(totaljam[p1] == 0) setText(" ${totaljam[p1]} Hour")
+                else if(totaljam[p1] > 0) setText(" ${totaljam[p1]} Hours")
+                else setText(" Error ")
+            }
         }
-        p0.judulRecyc.setText(judul[p1])
     }
 
     class adapterHolder(itemView:android.view.View) : RecyclerView.ViewHolder(itemView){
 
-        val dateRecyc = itemView.findViewById<TextView>(R.id.tanggalrecycler)
-        val dayRecyc = itemView.findViewById<TextView>(R.id.harirecycler)
         val descRecyc = itemView.findViewById<TextView>(R.id.descrecycler)
         val judulRecyc = itemView.findViewById<TextView>(R.id.judulrecycler)
         val maxhours= itemView.findViewById<TextView>(R.id.totaljamrecycler)
-        val imgsparator = itemView.findViewById<ImageView>(R.id.separatorrecycler)
+//        val parentRec= itemView.findViewById<ImageView>(R.id.parent_recycler)
     }
 }

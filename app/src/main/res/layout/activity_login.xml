@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:orientation="vertical"
+        android:background="@color/ElectroMagnetic"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ActivitySchedule_app.LoginActivity">
+
+    <LinearLayout
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="163dp"
+            android:layout_marginStart="0dp">
+
+        <TextView
+                android:textSize="22dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/LynxWhite"
+                android:text="Schedule App"
+                android:fontFamily="@font/roboto_thin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+                android:background="@color/LynxWhite"
+                android:layout_width="@dimen/item_width"
+                android:layout_height="0.25dp"/>
+
+        <LinearLayout
+                android:padding="30dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <EditText
+                    android:layout_margin="5dp"
+                    android:padding="2.5dp"
+                    android:background="@drawable/edit_text_common_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <EditText
+                    android:layout_margin="5dp"
+                    android:padding="2.5dp"
+                    android:background="@drawable/edit_text_common_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <Button
+                    style="?android:borderlessButtonStyle"
+                    android:fontFamily="@font/roboto_thin"
+                    android:textColor="@color/LynxWhite"
+                    android:text="Login"
+                    android:layout_margin="5dp"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true">
+
+        <ImageView
+                android:layout_gravity="center"
+                android:background="@color/LynxWhite"
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                tools:ignore="Suspicious0dp"/>
+        <LinearLayout
+                android:padding="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:textColor="@color/LynxWhite"
+                    android:fontFamily="@font/roboto_thin"
+                    android:text="Tidak Mempunyai Akun ? Daftar "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:textColor="@color/LynxWhite"
+                    android:fontFamily="@font/roboto"
+                    android:text="disini"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

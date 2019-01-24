@@ -5,6 +5,7 @@ import android.os.StrictMode
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Toast
+import later.corporation.adliraihan.schedule_app.ActivitySchedule_app.MainActivity
 import later.corporation.adliraihan.schedule_app.splashing
 import okhttp3.*
 import org.json.JSONArray
@@ -14,6 +15,7 @@ import java.security.KeyStore
 import java.security.Policy
 import java.security.Policy.setPolicy
 import java.util.*
+import java.util.concurrent.TimeUnit
 import javax.net.ssl.SSLContext
 import javax.net.ssl.TrustManager
 import javax.net.ssl.TrustManagerFactory
@@ -54,6 +56,8 @@ class common_database : AppCompatActivity(){
 
                                     for(i:Int in 0..(this.length()-1)){
                                         println("Hello , ${getJSONObject(i)} !")
+                                        MainActivity.jamString = getJSONObject(i).getString("id")
+                                        MainActivity.judulSingkatString = getJSONObject(i).getString("username")
                                     }
                                 }
                             }
@@ -76,7 +80,7 @@ class common_database : AppCompatActivity(){
                 trustManagers.apply {
                     SSLContext.getInstance("SSL").also {
                         it.init(null, arrayOf(trustManagers[0] as X509TrustManager),null).apply {
-                            return OkHttpClient.Builder().sslSocketFactory(it.socketFactory,trustManagers[0] as X509TrustManager)
+                            return OkHttpClient.Builder().connectTimeout(10,TimeUnit.SECONDS).retryOnConnectionFailure(false).sslSocketFactory(it.socketFactory,trustManagers[0] as X509TrustManager)
                         }
                         //
                     }
