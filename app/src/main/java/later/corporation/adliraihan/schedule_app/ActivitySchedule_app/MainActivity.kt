@@ -17,6 +17,7 @@ import later.corporation.adliraihan.schedule_app.R
 import later.corporation.adliraihan.schedule_app.otherFunctionSchedule_app.adapterFunction
 import later.corporation.adliraihan.schedule_app.otherFunctionSchedule_app.calendarFunction
 import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,12 +26,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewManager: RecyclerView.LayoutManager
 
     companion object {
-        var jamLandingString = arrayListOf<String>()
-        var judulLandingString = arrayListOf<String>()
-
-
-        var jamString:String = String()
-        var judulSingkatString:String = String()
+        var jamString = arrayListOf<String>()
+        var judulSingkatString = arrayListOf<String>()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,7 +63,6 @@ class MainActivity : AppCompatActivity() {
                     navigation_header_text.isEnabled = false
             }
             setOnLongClickListener {
-
                 return@setOnLongClickListener true
             }
         }
@@ -75,28 +71,29 @@ class MainActivity : AppCompatActivity() {
         initLandingQuote(jamString, judulSingkatString)
     }
 
-    fun initLandingQuote(jamstr:String,judulsingkatstr:String){
+    fun initLandingQuote(jamstr:ArrayList<String>,judulsingkatstr:ArrayList<String>){
+        //===============//
         val paramMatch = LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT,
             LinearLayout.LayoutParams.MATCH_PARENT
         )
         paramMatch.setMargins(10,10,10,10)
-       //===============//
-        viewManager = LinearLayoutManager(this)
         //===============//
-        testJaks.addView(
-            LinearLayout(this).apply {
-                setPadding(30,30,30,30)
-                background = getDrawable(R.drawable.activity_holder_white)
-                layoutParams = paramMatch
-                addView(
-                    LayoutInflater.from(this@MainActivity).inflate(R.layout.activity_holder_recycler,this,false).also {
-                        it.jamRecyler.setText(jamstr)
-                        it.judulSingkat.setText(judulsingkatstr)
-                    }
-                )
-            }
-        )
+        for (i:Int in 0..jamstr.size-1) {
+            testJaks.addView(
+                LinearLayout(this).apply {
+                    setPadding(30,30,30,30)
+                    background = getDrawable(R.drawable.activity_holder_white)
+                    layoutParams = paramMatch
+                        addView(
+                            LayoutInflater.from(this@MainActivity).inflate(R.layout.activity_holder_recycler,this,false).also {
+                                it.jamRecyler.setText(jamstr.get(i))
+                                it.judulSingkat.setText(judulsingkatstr.get(i))
+                            }
+                        )
+                }
+            )
+        }
         //======================//
     }
 }

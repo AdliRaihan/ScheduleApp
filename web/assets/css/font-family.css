@@ -1,0 +1,15 @@
+@font-face {
+    font-family: font-1;
+    src: url("../fonts/JosefinSans-light.ttf");
+}
+@font-face{
+    font-family: font-2;
+    src: url("../fonts/JosefinSans-Regular.ttf");
+}
+@font-face{
+    font-family: font-3;
+    src: url("../fonts/PT_Sans-Web-Regular.ttf");
+}
+.font-1{font-family: font-1;}
+.font-2{font-family: font-2;}
+.font-3{font-family: font-3;}

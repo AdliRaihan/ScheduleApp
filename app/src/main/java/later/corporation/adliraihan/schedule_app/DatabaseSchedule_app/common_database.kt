@@ -1,19 +1,26 @@
 package later.corporation.adliraihan.schedule_app.DatabaseSchedule_app
 
+import android.annotation.TargetApi
 import android.content.Context
+import android.os.Build
 import android.os.StrictMode
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Toast
 import later.corporation.adliraihan.schedule_app.ActivitySchedule_app.MainActivity
+import later.corporation.adliraihan.schedule_app.otherFunctionSchedule_app.calendarFunction
 import later.corporation.adliraihan.schedule_app.splashing
 import okhttp3.*
 import org.json.JSONArray
 import java.io.IOException
 import java.lang.IllegalStateException
+import java.lang.StringBuilder
 import java.security.KeyStore
 import java.security.Policy
 import java.security.Policy.setPolicy
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 import java.util.concurrent.TimeUnit
 import javax.net.ssl.SSLContext
@@ -38,6 +45,9 @@ class common_database : AppCompatActivity(){
             ).build()
     }
     fun onReadIDTarget(context: Context){
+
+        //Before Assign
+        //
         getCertificate().onGet()?.build()!!.newCall(Request.Builder()
             .url( defaultUri).build())
             .enqueue(object : Callback{
@@ -55,9 +65,12 @@ class common_database : AppCompatActivity(){
                                         println("Kosong")
 
                                     for(i:Int in 0..(this.length()-1)){
-                                        println("Hello , ${getJSONObject(i)} !")
-                                        MainActivity.jamString = getJSONObject(i).getString("id")
-                                        MainActivity.judulSingkatString = getJSONObject(i).getString("username")
+                                        getJSONObject(i).getString("commit_schedule_time").apply {
+                                            MainActivity.jamString.add(calendarFunction().getSpecTime(
+                                                ("${get(11)}${get(12)}").toInt()
+                                            ))
+                                        }
+                                        MainActivity.judulSingkatString.add(getJSONObject(i).getString("commit_schedule_name"))
                                     }
                                 }
                             }

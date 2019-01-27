@@ -21,10 +21,18 @@ class splashing : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         StrictMode.setThreadPolicy(StrictMode.ThreadPolicy.Builder().permitAll().build())
         super.onCreate(savedInstanceState)
+
+        //Reset Before Isset
+        onResetData()
+        //===========//
         setContentView(R.layout.activity_splashing)
         LoadingAnimation()
         common_database().onReadIDTarget(this)
         onCheck()
+    }
+    fun onResetData(){
+        MainActivity.judulSingkatString.clear()
+        MainActivity.jamString.clear()
     }
     fun onCheck(){
         checkConnectivity().onCheck(this).apply {
